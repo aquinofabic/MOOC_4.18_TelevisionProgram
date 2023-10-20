@@ -16,6 +16,9 @@ public class Main {
             int inputDuration = scanner.nextInt();
 
             list.add(new TelevisionProgram(inputName, inputDuration));
+            String inputAgain = scanner.nextLine();
+            // The combination of .nextInt and .nextLine leaves a line break character in the keyboard buffer
+            // adding another .nextLine results in an empty string that fulfils the keyboard buffer.
         }
         System.out.println("Program's maximum duration? ");
         int maxDuration = scanner.nextInt();
